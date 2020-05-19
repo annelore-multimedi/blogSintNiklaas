@@ -53,6 +53,26 @@
     //echo $result['username'];
     echo 'username: ' . $user->username . ' - firstname: ' . $user->first_name;
     ?>
+
+    <h2>Photo - alle foto's</h2>
+    <?php
+        $photos = Photo::find_all();
+        foreach ($photos as $photo){
+            echo $photo->title . "<br>";
+        }
+
+        /*$photo = new Photo();
+        $photo->title = 'Sam';
+        $photo->description = 'Lorem ipsum';
+        $photo->size = 15;
+
+        $photo->create();*/
+    ?>
+<!--
+    <h2>inlcudes path?</h2>
+    --><?php
+/*    echo INCLUDES_PATH;
+    */?>
 </div>
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
