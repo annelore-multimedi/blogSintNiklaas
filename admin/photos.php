@@ -22,8 +22,11 @@ include ('includes/content-top.php');
                     <th>Photo</th>
                     <th>Id</th>
                     <th>Title</th>
+                    <th>Caption</th>
                     <th>File Name</th>
+                    <th>Alternate Text</th>
                     <th>Size</th>
+                    <th>Edit?</th>
                     <th>Delete?</th>
                 </tr>
                 </thead>
@@ -34,8 +37,11 @@ include ('includes/content-top.php');
                         <td><img src="<?php echo $photo->picture_path(); ?>" height="62" width="62"></td>
                         <td><?php echo $photo->id; ?></td>
                         <td><?php echo $photo->title; ?></td>
+                        <td><?php echo $photo->caption; ?></td>
                         <td><?php echo $photo->filename; ?></td>
+                        <td><?php echo $photo->alternate_text; ?></td>
                         <td><?php echo $photo->size; ?></td>
+                        <td><a href="edit_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-danger rounded-0"><i class="fas fa-edit"></i></a></td>
                         <td><a href="delete_photo.php?id=<?php echo $photo->id; ?>" class="btn btn-danger rounded-0"><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
