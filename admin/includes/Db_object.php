@@ -67,7 +67,7 @@ class Db_object
          $sql .= $database->escape_string($this->first_name) . "', '";
          $sql .= $database->escape_string($this->last_name) . "')";*/
 // INSERT INTO user (username, password, first_name, last_name) VALUES ('gebruiker', '1478252', 'voornaam', 'familienaam')
-        var_dump($sql);
+        //var_dump($sql);
         if($database->query($sql)){
             $this->id = $database->the_insert_id();
             return true;
