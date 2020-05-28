@@ -90,7 +90,7 @@ class User extends Db_object
                 $this->errors[] = "This folder has no write rights!";
                 return false;
             }
-        }
+      }
     }
 }
 
